@@ -12,6 +12,8 @@ import org.junit.Test;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 /**
  * @author Michael Isvy
  *         Simple test to make sure that Bean Validation is working
