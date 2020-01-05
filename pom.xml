@@ -353,7 +353,7 @@
                     <execution>
                         <goals>
                             <goal>clean</goal>
-                            <goal>check</goal>
+                            <!-- <goal>check</goal> --> <!-- to speed tests ? -->
                         </goals>
                     </execution>
                 </executions>
