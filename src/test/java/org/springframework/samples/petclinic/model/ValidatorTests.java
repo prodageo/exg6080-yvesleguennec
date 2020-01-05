@@ -19,6 +19,10 @@ import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
  */
 public class ValidatorTests {
 
+    
+    
+    private static final Logger LOGGER=LoggerFactory.getLogger(Application.class);
+    
     private Validator createValidator() {
         LocalValidatorFactoryBean localValidatorFactoryBean = new LocalValidatorFactoryBean();
         localValidatorFactoryBean.afterPropertiesSet();
@@ -36,6 +40,8 @@ public class ValidatorTests {
         Validator validator = createValidator();
         Set<ConstraintViolation<Person>> constraintViolations = validator.validate(person);
 
+        LOGGER.info("shouldNotValidateWhenFirstNameEmpty : {}, {} and {}", 1,2,3);
+        
         assertThat(constraintViolations.size()).isEqualTo(1);
         ConstraintViolation<Person> violation = constraintViolations.iterator().next();
         assertThat(violation.getPropertyPath().toString()).isEqualTo("firstName");
