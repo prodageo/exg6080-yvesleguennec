@@ -31,6 +31,15 @@ public class ValidatorTests {
         return localValidatorFactoryBean;
     }
 
+    
+    @Test
+    public void shouldFirstandLastNameSettersWork() {
+        Person person = new Person();
+        person.setFirstName("Jonathan");
+        person.setLastName("Smith");   
+        assertThat(person.getLastName()).isEqualTo("Smith");
+    }
+    
     @Test
     public void shouldNotValidateWhenFirstNameEmpty() {
 
