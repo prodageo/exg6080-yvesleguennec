@@ -407,8 +407,8 @@
     <execution>
       <phase>test</phase>
       <goals>
-        <!-- <goal>report-only</goal> -->
-        <goal>report</goal> <!-- for nicer report -->
+        <goal>report-only</goal> <!-- -->
+        <!-- <goal>report</goal> --> <!-- for nicer report -->
       </goals>
     </execution>
   </executions>
