@@ -23,7 +23,7 @@ public class ValidatorTests {
 
     
     
-    private static final Logger LOGGER=LoggerFactory.getLogger(Application.class);
+    private static final Logger LOGGER=LoggerFactory.getLogger(ValidatorTests.class);
     
     private Validator createValidator() {
         LocalValidatorFactoryBean localValidatorFactoryBean = new LocalValidatorFactoryBean();
