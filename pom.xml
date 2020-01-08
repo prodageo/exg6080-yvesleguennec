@@ -264,6 +264,22 @@
             </testResource>
         </testResources>
         <plugins>
+
+            <!-- https://www.mkyong.com/maven/mvn-site-java-lang-classnotfoundexception-org-apache-maven-doxia-siterenderer-documentcontent/ -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.7.1</version>
+            </plugin>
+
+<!--
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>3.0.0</version>
+            </plugin>
+-->
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -433,7 +449,23 @@
         </execution>
     </executions>
 </plugin>         
+
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.8</version>
+                <configuration>
+                    <rulesets>
+                        <ruleset>/rulesets/internal/all-java.xml</ruleset>
+<!--
+                        <ruleset>/rulesets/java/braces.xml</ruleset>
+                        <ruleset>/rulesets/java/naming.xml</ruleset>
+-->
+                    </rulesets>
+                </configuration>
                  
+        </plugin>
         </plugins>
     </build>
     <reporting>
@@ -451,8 +483,14 @@
                     </reportSet>
                 </reportSets>
             </plugin>
+
         </plugins>
     </reporting>
+
+
+
+
+
     <profiles>
         <profile>
             <id>HSQLDB</id>

@@ -36,7 +36,7 @@ public class ValidatorTests {
     public void shouldFirstnameSetterWork() {
         Person person = new Person();
         person.setFirstName("Jonathan");
-        assertThat(person.getLastName()).isEqualTo("Jonattan");
+        assertThat(person.getLastName()).isEqualTo("Jonathan");
     }
     
     @Test
