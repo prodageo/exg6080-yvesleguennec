@@ -33,7 +33,7 @@ public class ValidatorTests {
 
     
     @Test
-    public void shouldFirstnameSetterWork() {
+    public void shouldFirstnameBeIdenticalToInput() {
         Person person = new Person();
         person.setFirstName("Jonathan");
         assertThat(person.getLastName()).isEqualTo("Jonathan");
